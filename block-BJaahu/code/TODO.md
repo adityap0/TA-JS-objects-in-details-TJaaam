@@ -1,5 +1,7 @@
 ### For single question we need the following data and methods:
 
+<!-- Yet to do -->
+
 - Data:
   - `title` (title of the question)
   - `options` (array of options)
@@ -23,13 +25,13 @@ You can use the data given below. You will also have to change the name of the f
 
 ```js
 let firstQuestion = new Question(
-  'Where is the capital of Jordan',
-  ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi'],
+  "Where is the capital of Jordan",
+  ["Tashkent", "Amaan", "Kuwait City", "Nairobi"],
   1
 );
 let secondQuestion = new Question(
-  'Where is the capital of Jamaica',
-  ['Tashkent', 'Amaan', 'Kingston', 'Nairobi'],
+  "Where is the capital of Jamaica",
+  ["Tashkent", "Amaan", "Kingston", "Nairobi"],
   2
 );
 ```
