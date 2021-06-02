@@ -9,6 +9,7 @@
 - Methods:
   - `isAnswerCorrect` (will accept the index and returns `true` or `false` based on the answer is correct or not)
   - `getCorrectAnswer` (will return the correct answer of the quiz when the function is called)
+  <!-- d -->
 
 ### Create the object using the following ways
 
