@@ -12,6 +12,26 @@ If we want to build any app the two most important thing to think about is Data 
   - `isAnswerCorrect` (will accept the index and returns `true` or `false` based on the answer is correct or not)
   - `getCorrectAnswer` (will return the correct answer of the quiz when the function is called)
 
+```js
+function createQuiz(title, option, correctAnswerIndex) {
+  let finalObj = {};
+  finalObj.title = title;
+  finalObj.option = option.map((item) => {
+    return item;
+  });
+  finalObj.correctAnswerIndex = correctAnswerIndex;
+  finalObj.isAnswerCorrect = (index) => {
+    if (index === correctAnswerIndex) {
+      return true;
+    }
+  };
+  finalObj.getCorrectAnswer = () => {
+    return correctAnswerIndex;
+  };
+  return finalObj;
+}
+```
+
 ### Create the object using the following ways
 
 For each different ways of creating object write different solutions.
@@ -23,6 +43,26 @@ For each different ways of creating object write different solutions.
 - Write test by creating two objects also test both methods.
 
 ### To test use the following data
+
+```js
+function createQuiz(title, option, correctAnswerIndex) {
+  let finalObj = {};
+  finalObj.title = title;
+  finalObj.option = option.map((item) => {
+    return item;
+  });
+  finalObj.correctAnswerIndex = correctAnswerIndex;
+  finalObj.isAnswerCorrect = (index) => {
+    if (index === correctAnswerIndex) {
+      return true;
+    }
+  };
+  finalObj.getCorrectAnswer = () => {
+    return correctAnswerIndex;
+  };
+  return finalObj;
+}
+```
 
 ```js
 const testData = {
