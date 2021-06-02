@@ -21,9 +21,22 @@ For each different ways of creating object write different solutions.
 
 ### To test use the following data
 
-You can use the data given below. You will also have to change the name of the function while calling them.
+Create using class
 
 ```js
+class Question {
+  constructor(title, options, correctAnswerIndex) {
+    this.title = title;
+    this.options = options;
+    this.correctAnswerIndex = correctAnswerIndex;
+  }
+  isAnswerCorrect(index) {
+    return index === this.correctAnswerIndex;
+  }
+  getCorrectAnswer() {
+    return this.correctAnswerIndex;
+  }
+}
 let firstQuestion = new Question(
   "Where is the capital of Jordan",
   ["Tashkent", "Amaan", "Kuwait City", "Nairobi"],
@@ -34,4 +47,10 @@ let secondQuestion = new Question(
   ["Tashkent", "Amaan", "Kingston", "Nairobi"],
   2
 );
+```
+
+You can use the data given below. You will also have to change the name of the function while calling them.
+
+```js
+
 ```
