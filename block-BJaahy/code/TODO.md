@@ -115,11 +115,52 @@ class Square {
   get area() {
     return this.width * this.height;
   }
-  static isEqual;
+  static isEqual(square1, square2) {
+    if (square1.height === square2.height) {
+      return true;
+    } else return false;
+  }
 }
 ```
 
 - Create another property named `numberOfTimes` that will hold the value of number of times the area property is accessed from the object. The values will initialize to `0`. The area property can't be accessed more than 4 times. If it crosses 4 times alert message `Upper Limit Reached`s
+
+```js
+class Square {
+  constructor(side) {
+    this.width = side;
+    this.height = side;
+    this.numberOfTimes = 0;
+  }
+  description() {
+    alert(`The square is ${this.width} x ${this.height}`);
+  }
+  calcArea() {
+    return this.width * this.height;
+  }
+  set area(inputArea) {
+    if (Math.sqrt(inputArea) === Math.floor(Math.sqrt(inputArea))) {
+      this.width = Math.sqrt(inputArea);
+      this.height = this.width;
+    } else {
+      alert(`Not a valid input`);
+    }
+  get area() {
+    this.numberOfTimes += 1;
+    if (this.numberOfTimes >= 4) {
+      alert(`Upper Limit Reached`);
+    } else {
+      return this.width * this.height;
+    }
+  }
+  static isEqual(square1, square2) {
+    if (square1.height === square2.height) {
+      return true;
+    } else return false;
+  }
+  numberOfTimes() {}
+}
+```
 
 - Create two instance of the `Square` class
 
@@ -131,11 +172,78 @@ class Square {
 
 - Create a `User` class that accepts `firstName` and `lastName` property
 
+```js
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+```
+
 - Create a getter method named `fullName` that will return the full name of the person.
+
+```js
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+```
 
 - Create a `fullName` setter method that will accept full name parameter of the person. It will update the `firstName` and `lastName` based on the input. Say if the user passed `Arya Stark` it will update the `firstName` to `Arya` and `lastName` to `Stark`. It will also change one condition if the length of the name passed is less than 5 characters it will alert a message saying `Full name should be more than 5 characters`
 
+```js
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  set fullName(input) {
+    if (input.length < 5) {
+      alert(`Full name should be more than 5 characters`);
+    } else {
+      let nameArr = input.split(" ");
+      this.firstName = nameArr[0];
+      this.lastName = nameArr[1];
+    }
+  }
+}
+```
+
 - Create a method named `nameContains` which will accept string and will return `true` or `false` based on if the name of the user contains the text that passed by user.
+
+```js
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  set fullName(input) {
+    if (input.length < 5) {
+      alert(`Full name should be more than 5 characters`);
+    } else {
+      let nameArr = input.split(" ");
+      this.firstName = nameArr[0];
+      this.lastName = nameArr[1];
+    }
+  }
+  nameContains(input) {
+    let fullName = this.firstName + this.lastName;
+    return fullName.includes(input);
+  }
+}
+```
 
 - Create two instance of the `User` class
 
