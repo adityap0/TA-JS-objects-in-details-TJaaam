@@ -4,13 +4,13 @@
 */
 
 // myMap function goes here
-function myMap(inputArr) {
-  let finalArr = [];
-  inputArr.forEach((cb) => {
-    finalArr.push(cb);
-  });
-  return finalArr;
-}
+Array.prototype.myMap = function (cb) {
+  let final = [];
+  for (let i = 0; i < this.length; i++) {
+    const item = this[i];
+    final.push(cb(item, i, this));
+  }
+};
 // Test the myMap function you created above
 
 let numbers = [1, 5, 6, 8, 9];
