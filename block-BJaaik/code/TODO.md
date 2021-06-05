@@ -9,4 +9,4 @@ Property ending with `()` is method. And others are properties.
 
 ![Inheritance](../assets/inheritance.png)
 
-<!-- to do -->
+<!-- to do --
