@@ -10,6 +10,31 @@ Queue
 
 1. Create a class name `Stack` with the following data and methods. Also implement a `length` getter method.
 
+```js
+class Stack {
+    constructor(stack = [])
+    {
+        this.stack = []
+    }
+  push(input) {
+    this.stack.push(input);
+    this.length += 1;
+  }
+  pop() {
+    this.stack.shift();
+    this.length -= 1;
+  }
+  peek(peekElement){
+      this.stack.forEach(){
+
+      }
+
+
+  }
+
+}
+```
+
 Data:
 
 - `stack`
@@ -31,8 +56,8 @@ Getter
 
 ```js
 let myStack = new Stack();
-myStack.push('One');
-myStack.push('Two');
+myStack.push("One");
+myStack.push("Two");
 console.log(myStack.length); // 2
 console.log(myStack.peek()); // "Two"
 console.log(myStack.peek(0)); // "One"
@@ -68,9 +93,9 @@ Getter
 
 ```js
 let atmQueue = new Queue();
-atmQueue.enqueue('Aman');
-atmQueue.enqueue('John');
-atmQueue.enqueue('Rohan');
+atmQueue.enqueue("Aman");
+atmQueue.enqueue("John");
+atmQueue.enqueue("Rohan");
 console.log(atmQueue.displayQueue()); // "Aman John Rohan"
 console.log(atmQueue.length); // 3
 console.log(atmQueue.peek()); // "Aman"
